@@ -1,5 +1,24 @@
 // Put in a prologue
-
+/**
+ * Program Name: MatrixVerticalAdd
+ * Date: 9.9.2024
+ * Author: Charles Doan
+ * This project is intended to read a file of matrices, where each matrix 
+ * is preceded by a line specifying first the number of rows, then 
+ * number of columns in the matrix. After summing up the columns of the 
+ * matrices, it determines if the sums are symmetrical or not.
+ * 
+ * EXAMPLE:
+ * 3 4
+ * 1 1 7  7
+ * 4 6 1 -2
+ * 1 1 0  2
+ * 
+ * There are three rows; four columns, and the sums are as follows:
+ * 6 8 8 7
+ * 
+ * Therefore, the sums are not symmetrical.
+ */
 #include <string>
 #include <iostream>
 #include <fstream>
