@@ -34,7 +34,6 @@ void         displayMatrix (int [][MAX_MATRIX_SIZE], unsigned,  unsigned);
 void displayCalcMatrixSums (int [][MAX_MATRIX_SIZE], unsigned,  unsigned,  int[MAX_MATRIX_SIZE]);
 void   symmetryCheckMatrix (int [], unsigned,  unsigned);
 void        sortMatrixRows (int [][MAX_MATRIX_SIZE], unsigned,  unsigned);
-void testSort();
 
 int main() {
   unsigned height,
