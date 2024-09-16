@@ -127,15 +127,20 @@ void symmetryCheckMatrix(int colSums[], unsigned width, unsigned height) {
   cout << "Yes" << "\n" << endl;
 }
 
+void insertionSort(int matrix[][MAX_MATRIX_SIZE], int row, unsigned width) {
+  for (int col = 1; col < width; col++) {
+    int key = matrix[row][col];
+    int insertor;
+    for (insertor = col; insertor > 0 && key < matrix[row][insertor - 1]; insertor--) {
+      matrix[row][insertor] = matrix[row][insertor - 1];
+    }
+    matrix[row][insertor] = key;
+  } 
+}
+
 void sortMatrixRows(int matrix[][MAX_MATRIX_SIZE], unsigned width, unsigned height) {
     for (int row = 0; row < height; row++) {
-      for (int col = 1; col < width; col++) {
-        int key = matrix[row][col];
-        int insertor;
-        for (insertor = col; insertor > 0 && key < matrix[row][insertor - 1]; insertor--) {
-          matrix[row][insertor] = matrix[row][insertor - 1];
-        }
-        matrix[row][insertor] = key;
-      }      
+      insertionSort(matrix, row, width);
     }
 }
+
